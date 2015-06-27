@@ -406,7 +406,7 @@ public class SimpleControls extends Activity {
 				public void run() {
 					byte[] serviceUuidBytes = new byte[16];
 					String serviceUuid = "";
-					for (int i = 32, j = 0; i >= 17; i--, j++) {
+					for (int i = 30, j = 0; i >= 15; i--, j++) {
 						serviceUuidBytes[j] = scanRecord[i];
 					}
 					serviceUuid = bytesToHex(serviceUuidBytes);
