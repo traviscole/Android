@@ -295,7 +295,7 @@ public class SimpleControls extends Activity {
 	private void readAnalogInValue(byte[] data) {
 		for (int i = 0; i < data.length; i += 3) {
 			if (data[i] == 0x0A) {
-				if (data[i + 1] == 0x01)
+				if (data[i + 1] == 0x01 && i+1 < data.length)
 					digitalInBtn.setChecked(false);
 				else
 					digitalInBtn.setChecked(true);
